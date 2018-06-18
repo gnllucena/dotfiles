@@ -52,6 +52,7 @@ como emulador de terminal e o  como shell.
 	$ sudo dnf install nodejs
 
 # Setting dotfiles
+clone dotfiles repo and update app's configurations
 
 	$ git clone https://github.com/gnllucena/dotfiles
 
@@ -63,7 +64,7 @@ como emulador de terminal e o  como shell.
 
 	$ cp ./bash_profile  ~/.bash_profile
 
-> You need to restart /bin/bash after this in order for dotfiles changes takes place
+You need to restart /bin/bash after this in order for dotfiles changes takes place
 
 # Creating development environments
 
@@ -99,15 +100,15 @@ como emulador de terminal e o  como shell.
 
 ### Python
 
-<a href="https://docs.python.org/3/faq/general.html#what-is-python">Python</a> is an interpreted, interactive, object-oriented programming language. It incorporates modules, exceptions, dynamic typing, very high level dynamic data types, and classes. Python combines remarkable power with very clear syntax. It has interfaces to many system calls and libraries, as well as to various window systems, and is extensible in C or C++. It is also usable as an extension language for applications that need a programmable interface.
+><a href="https://docs.python.org/3/faq/general.html#what-is-python">Python</a> is an interpreted, interactive, object-oriented programming language. It incorporates modules, exceptions, dynamic typing, very high level dynamic data types, and classes. Python combines remarkable power with very clear syntax. It has interfaces to many system calls and libraries, as well as to various window systems, and is extensible in C or C++. It is also usable as an extension language for applications that need a programmable interface.
 
 	$ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev
 
-<a href="https://github.com/pyenv/pyenv">pyenv</a> lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.
+><a href="https://github.com/pyenv/pyenv">pyenv</a> lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.
 
 	$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
-<a href="https://github.com/pyenv/pyenv">pyenv-virtualenv</a> is a pyenv plugin that provides features to manage virtualenvs and conda environments for Python on UNIX-like systems.
+><a href="https://github.com/pyenv/pyenv">pyenv-virtualenv</a> is a pyenv plugin that provides features to manage virtualenvs and conda environments for Python on UNIX-like systems.
 
 	$ git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 
@@ -115,7 +116,7 @@ como emulador de terminal e o  como shell.
 # Stuff
 
 ### Fedy
-<a href="https://www.folkswithhats.org/">Fedy</a> lets you install multimedia codecs and additional software that Fedora doesn’t want to ship, such as MP3 support, Adobe Flash, Oracle Java, and much more, with just a few clicks.
+><a href="https://www.folkswithhats.org/">Fedy</a> lets you install multimedia codecs and additional software that Fedora doesn’t want to ship, such as MP3 support, Adobe Flash, Oracle Java, and much more, with just a few clicks.
 
 	$ dnf install https://dl.folkswithhats.org/fedora/$(rpm -E %fedora)/RPMS/fedy-release.rpm
 
@@ -134,7 +135,7 @@ como emulador de terminal e o  como shell.
 
 
 ### Spotify
-There are millions of songs on <a href="https://www.spotify.com/us/">Spotify</a>. Play your favorites, discover new tracks, and build the perfect collection.
+>There are millions of songs on <a href="https://www.spotify.com/us/">Spotify</a>. Play your favorites, discover new tracks, and build the perfect collection.
 
 	$ sudo dnf config-manager --add-repo=http://negativo17.org/repos/fedora-spotify.repo
 
