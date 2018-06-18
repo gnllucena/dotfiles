@@ -11,10 +11,10 @@ Open `PowerShell` as Administrator and run
 Restart your computer when prompted.
 
 ## Before WSL configuration
-### WSL
+### Installing WSL
 Install <a href="https://www.microsoft.com/pt-br/p/ubuntu-1604/9pjn388hp8c9">Ubuntu 16.04</a>
 
-### Docker
+### Installing and configuring Docker
 
 For Docker on WSL to work you must install and expose the Docker Windows Deamon on tcp://localhost2375, this can be done by acessing General Settings on <a href="https://store.docker.com/editions/community/docker-ce-desktop-windows">Docker for Windows</a>:
 
