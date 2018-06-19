@@ -4,7 +4,7 @@
 
 After following theses steps your developing enviroment will be able to:
     
-* create and manage multiple isolated <a href="https://docs.python.org/3/faq/general.html#what-is-python">Python</a> environments though `pyenv` and `pyenv virtualenv` on `Fedora 28` and `Ubuntu 16.04`.
+* Create and manage multiple isolated <a href="https://docs.python.org/3/faq/general.html#what-is-python">Python</a> environments though `pyenv` and `pyenv virtualenv` on `Fedora 28` and `Ubuntu 16.04`.
 
 * Create and administrate `docker` `containers` on <a href="https://linuxcontainers.org/">LXC</a>.
 

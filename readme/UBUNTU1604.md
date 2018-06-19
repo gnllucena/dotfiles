@@ -84,11 +84,7 @@ You need to restart /bin/bash after this in order for dotfiles changes takes pla
 
 	$ sudo usermod -aG docker $USER
 
-	$ sudo service docker stop
-
-	$ sudo nohup docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
-
-	$ sudo service docker start
+	$ sudo systemctl start docker
 
 ### .NET Core
 

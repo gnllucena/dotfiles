@@ -46,6 +46,48 @@ como emulador de terminal e o  como shell.
 
 	$ sudo dnf install code
 
+### Remmina
+	
+><a href="https://github.com/FreeRDP/Remmina/wiki">Remmina</a> is a remote desktop client written in GTK+, aiming to be useful for
+system administrators and travellers, who need to work with lots of remote
+computers in front of either large monitors or tiny netbooks. Remmina supports
+multiple network protocols in an integrated and consistent user interface.
+
+	$ sudo dnf install remmina
+
+### Postman
+
+>The <a href="https://www.getpostman.com/docs/v6/">Postman</a> API has several endpoints to help you integrate Postman with your development toolchain. You can add new collections, update existing collections, update environments, or add and run monitors directly through the API. This API enables you to programmatically access your data stored in your Postman account with ease.
+
+	$ cd /tmp 
+
+	$ wget -q https://dl.pstmn.io/download/latest/linux?arch=64 -O postman.tar.gz
+
+	$ tar -xzf postman.tar.gz
+
+	$ rm postman.tar.gz
+
+	$ sudo rm -rf /opt/Postman
+
+	$ sudo mv Postman /opt/Postman
+
+	$ sudo rm -f /usr/bin/postman
+
+	$ sudo ln -s /opt/Postman/Postman /usr/bin/postman
+
+	$ echo "[Desktop Entry]
+	Name=Postman
+	GenericName=API Client
+	X-GNOME-FullName=Postman API Client
+	Comment=Make and view REST API calls and responses
+	Keywords=api;
+	Exec=/opt/bin/postman
+	Terminal=false
+	Type=Application
+	Icon=/opt/postman/resources/app/assets/icon.png
+	Categories=Development;Utilities;" >> ~/.local/share/applications/postman.desktop
+
+
 ### NPM
 > Use <a href="https://docs.npmjs.com/">npm</a> to adapt packages of code to your apps, or incorporate packages as they are, download standalone tools you can use right away, run packages without downloading using npx, and many more.
 
@@ -78,11 +120,7 @@ You need to restart /bin/bash after this in order for dotfiles changes takes pla
 
 	$ sudo usermod -aG docker $USER
 
-	$ sudo service docker stop
-
-	$ sudo nohup docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
-
-	$ sudo service docker start
+	$ sudo systemctl start docker
 
 ### .NET Core
 

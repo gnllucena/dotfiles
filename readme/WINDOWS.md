@@ -16,7 +16,7 @@ Install <a href="https://www.microsoft.com/pt-br/p/ubuntu-1604/9pjn388hp8c9">Ubu
 
 ### Installing and configuring Docker
 
-For Docker on WSL to work you must install and expose the Docker Windows Deamon on tcp://localhost2375, this can be done by acessing General Settings on <a href="https://store.docker.com/editions/community/docker-ce-desktop-windows">Docker for Windows</a>:
+For Docker on WSL to work you must install and expose the Docker Windows Deamon on tcp://localhost2375, this can be done by acessing General Settings on <a href="https://store.docker.com/editions/community/docker-ce-desktop-windows">Docker for Windows</a>
 
 <img src="images/expose_daemon_on_tcplocalhost2375_without_tls.PNG">
 
