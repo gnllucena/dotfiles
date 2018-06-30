@@ -1,0 +1,122 @@
+wifi-menu wlp4s0
+
+$ cfdisk /dev/sda
+	/dev/sda1 - 1gb - EFI System
+	/dev/sda2 - 8gb - Linux swap
+	/dev/sda3 - default - File system
+
+$ mkfs.ext4 /dev/sda3
+
+$ mkswap /dev/sda2
+
+$ swapon /dev/sda2
+
+$ mkfs.fat -F32 /dev/sda1
+
+$ mount /dev/sda3 /mnt
+
+$ mkdir /mnt/boot
+
+$ mount /dev/sda1 /mnt/boot
+
+------------------------------------
+
+$ cp /etc/pacman.d/mirrorlist /etc/pacmand.d/mirrorlist.bak
+
+$ sed -i 's/^#Server/server/' /etc/pacman.d/mirrorlist
+
+# $ rankmirrors -n /etc/pacman.d/mirrorlist.bak > /etc/pacman.d/mirrorlist --nao funciona
+
+$ pacstrap -i /mnt base base-devel
+
+$ genfstab -U -p /mnt >> /mnt/etc/fstab 
+
+------------------------------------
+
+$ arch-chroot /mnt
+
+------------------------------------
+
+$ nano /etc/locale.gen
+
+	descomentar:
+	en_US.UTF-8
+
+$ echo LANG=en_US.UTF-8 > /etc/locale.conf
+
+$ export LANG=en_US.UTF-8 
+
+------------------------------------
+
+$ ln -s /usr/share/zoneinfo/Brazil/East > /etc/localtime
+
+$ hwclock --systohc --utc
+
+$ echo gnllucena-x1 > /etc/hostname
+
+------------------------------------
+
+$ nano /etc/pacman.conf
+
+	[archlinuxfr]
+	SigLevel = Optional TrustAll
+	Server = http://repo.archlinux.fr/$arch
+
+	descomentar
+	[multilib]
+	Include = /etc/pacman.d/mirrorlist
+
+$ pacman -Sy
+
+$ pacman -S intel-ucode networkmanager iw gnome-shell nautilus gnome-terminal gnome-tweak-tool gnome-control-center xdg-user-dirs gdm gedit
+
+------------------------------------
+
+$ passwd
+
+$ useradd -m -g users -G wheel,storage,power -s /bin/bash gabriel
+
+$ passwd gabriel
+
+$ EDITOR=nano visudo
+
+	descomentar:
+	wheel ALL=(ALL) ALL
+
+	adicionar:
+	Defaults rootpw
+
+------------------------------------
+
+$ mount -t efivarfs efivarfs /sys/firmware/efi/efivarfs/
+
+$ bootctl install
+
+$ nano /boot/loader/entries/arch.conf
+
+	title Arch Linux
+	linux vmlinuz-linux
+	initrd /intel-ucode.img
+	initrd /initramfs-linux.img
+
+$ echo "options root=PARTUUID=$(blkid -s PARTUUID -o value /dev/sda3) rw" >> /boot/loader/entries/arch.conf
+
+------------------------------------
+
+$ sudo systemctl enable fstrim.timer
+
+$ sudo systemctl enable NetworkManager.service
+
+$ sudo systemctl enable bluetooth.service
+
+$ sudo systemctl enable gdm
+
+$ exit
+
+$ umount -R /mnt
+
+$ reboot
+
+
+
+
