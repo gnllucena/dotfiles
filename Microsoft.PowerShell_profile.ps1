@@ -2,7 +2,7 @@
 # Install-Module oh-my-posh -Scope CurrentUser
 # Install-Module z -Scope CurrentUser
 # Install-Module PSReadLine -AllowPrerelease -Scope CurrentUser -Force
-# Install-Module Get-ChildItemColor -Scope CurrentUser
+# Install-Module Get-ChildItemColor -Scope CurrentUser -AllowClobber
 
 Import-Module posh-git
 Import-Module oh-my-posh
