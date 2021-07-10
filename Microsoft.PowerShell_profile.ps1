@@ -20,6 +20,6 @@ get-psreadlineoption | % predictionsource
 Set-Alias ll Get-ChildItemColor -option AllScope
 Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
 Set-Alias .. cd..
-Set-Theme Paradox
+Set-PoshPrompt Paradox
 
 cd c:/git
