@@ -11,9 +11,10 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  //keeps messing with emails { replace-tags }
+  // "[html]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -41,26 +42,20 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "files.trimTrailingWhitespace": true,
   "diffEditor.renderSideBySide": false,
-  "editor.detectIndentation": false,
   "window.nativeFullScreen": false,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-
-  /**
-   * Hide Everything
-   */
-  "workbench.activityBar.visible": false,
-  "workbench.sideBar.location": "left",
+  "workbench.sideBar.location": "right",
   "workbench.editor.showTabs": false,
   "editor.minimap.enabled": false,
   "editor.lineNumbers": "off",
+  "editor.guides.indentation": false,
 
   /**
    * Silence The Noise
    */
   "breadcrumbs.enabled": false,
   "scm.diffDecorations": "none",
-  "editor.hover.enabled": false,
   "editor.matchBrackets": "never",
   "workbench.tips.enabled": false,
   "editor.colorDecorators": false,
@@ -86,6 +81,7 @@
    **/
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
+  "window.zoomLevel": 2,
   "editor.fontSize": 12,
   "editor.lineHeight": 0,
   "editor.suggestFontSize": 15,
@@ -94,30 +90,42 @@
   "terminal.integrated.lineHeight": 1.1,
 
   /**
+   * Find
+   **/
+  // "search.useIgnoreFiles": false,
+  // "search.exclude": {
+  //   // "**/vendor": true,
+  //   // "**/public": true,
+  //   "**/node_modules": true
+  //   // "**/.next": true,
+  //   // "**/dist": true,
+  //   // "**/cdk.out": false,
+  //   // "**/cdk.json": true,
+  //   // "**/_ide_helper.php": true,
+  //   // "**/composer.lock": true,
+  //   // "**/package-lock.json": true,
+  //   // "**/pnpm-lock.yaml": true,
+  //   // "**/tsconfig.tsbuildinfo": true,
+  //   // "storage": true,
+  //   // "cdk.json": true,
+  //   // ".phpunit.result.cache": true
+  // },
+
+  /**
    * Old settings
    **/
   //   "javascript.updateImportsOnFileMove.enabled": "always",
   //   "typescript.updateImportsOnFileMove.enabled": "always",
-  //   "explorer.confirmDragAndDrop": false,
   //   "terminal.integrated.fontFamily": "Menlo",
   //   "editor.codeActionsOnSave": {
   //     "source.fixAll.eslint": true
   //   },
-  //   "files.exclude": {
-  //     "**/.dart_tool": true,
-  //     "**/.flutter-plugins": true,
-  //     "**/.flutter-plugins-dependencies": true,
-  //     "**/.idea": true,
-  //     "**/.packages": true,
-  //     "**/*.iml": true,
-  //     "**/generated_plugin_registrant.dart": true,
-  //     "node_modules/": true
-  //   },
+
   //   "editor.gotoLocation.multipleDefinitions": "goto",
   //   "workbench.editor.untitled.hint": "hidden",
-  //   "explorer.compactFolders": false,
+
   //   "workbench.startupEditor": "none",
-  //   "explorer.confirmDelete": false,
+
   //   "extensions.ignoreRecommendations": true,
   //   "editor.linkedEditing": true,
   //   "security.workspace.trust.untrustedFiles": "open",
@@ -128,8 +136,34 @@
   //   "git.autofetch": true,
   //   "editor.stickyScroll.enabled": true
 
-  "window.zoomLevel": 2,
-  "editor.formatOnSave": true
+  /**
+   * Popups confirmations
+   **/
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "files.exclude": {
+    "**/.dart_tool": true,
+    "**/.flutter-plugins": true,
+    "**/.flutter-plugins-dependencies": true,
+    "**/.idea": true,
+    "**/.packages": true,
+    "**/*.iml": true,
+    "**/generated_plugin_registrant.dart": true
+    // "node_modules/": true
+  },
+
+  //
+
+  //ctrl+s -> prettier
+  "editor.formatOnSave": true,
+
+  "debug.javascript.autoAttachFilter": "always",
+  "extensions.ignoreRecommendations": true,
+  // impacta o ctrl+shift+f
+  //"workbench.panel.opensMaximized": "always",
+  "workbench.activityBar.visible": false
+
   /**
    * End Old settings
    **/

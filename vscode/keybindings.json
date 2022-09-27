@@ -56,6 +56,12 @@
   /**
    * File Explorer
    **/
+  // {
+  //   "key": "cmd+shift+f",
+  //   fechar o ctrl+shift+f quando estiver aberto
+  //   "command": "duplicate.execute",
+  //   "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  // },
   {
     "key": "cmd+d",
     "command": "duplicate.execute",
@@ -70,9 +76,5 @@
     "key": "shift+cmd+n",
     "command": "explorer.newFolder",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "workbench.action.closeActiveEditor"
   }
 ]
