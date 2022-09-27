@@ -92,24 +92,27 @@
   /**
    * Find
    **/
-  // "search.useIgnoreFiles": false,
-  // "search.exclude": {
-  //   // "**/vendor": true,
-  //   // "**/public": true,
-  //   "**/node_modules": true
-  //   // "**/.next": true,
-  //   // "**/dist": true,
-  //   // "**/cdk.out": false,
-  //   // "**/cdk.json": true,
-  //   // "**/_ide_helper.php": true,
-  //   // "**/composer.lock": true,
-  //   // "**/package-lock.json": true,
-  //   // "**/pnpm-lock.yaml": true,
-  //   // "**/tsconfig.tsbuildinfo": true,
-  //   // "storage": true,
-  //   // "cdk.json": true,
-  //   // ".phpunit.result.cache": true
-  // },
+  "files.exclude": {
+    "**/.dart_tool": true,
+    "**/.flutter-plugins": true,
+    "**/.flutter-plugins-dependencies": true,
+    "**/.idea": true,
+    "**/.packages": true,
+    "**/*.iml": true,
+    "**/generated_plugin_registrant.dart": true,
+    "**/tsconfig.tsbuildinfo": true,
+    "**/node_modules": true,
+    "**/cdk.out": true,
+    "**/vendor": true,
+    "**/dist": true,
+    "**/.next": true,
+    "**/.turbo": true,
+    "**/.localstack": true
+  },
+  "search.exclude": {
+    "**/pnpm-lock.yaml": true,
+    "**/cdk.json": true
+  },
 
   /**
    * Old settings
@@ -137,21 +140,17 @@
   //   "editor.stickyScroll.enabled": true
 
   /**
+   * Git
+   */
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+
+  /**
    * Popups confirmations
    **/
   "explorer.confirmDragAndDrop": false,
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
-  "files.exclude": {
-    "**/.dart_tool": true,
-    "**/.flutter-plugins": true,
-    "**/.flutter-plugins-dependencies": true,
-    "**/.idea": true,
-    "**/.packages": true,
-    "**/*.iml": true,
-    "**/generated_plugin_registrant.dart": true
-    // "node_modules/": true
-  },
 
   //
 
