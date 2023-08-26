@@ -16,7 +16,7 @@
 # Install-Module PSReadLine -Scope CurrentUser 
 # Install-Module Get-ChildItemColor -Scope CurrentUser
 
-oh-my-posh init pwsh  --config 'C:\Users\gnllu\AppData\Local\Programs\oh-my-posh\themes\robbyrussell.omp.json' | Invoke-Expression
+oh-my-posh init pwsh --config "$env:LOCALAPPDATA\Programs\oh-my-posh\themes\robbyrussell.omp.json" | Invoke-Expression
 
 Import-Module z
 Import-Module PSReadLine
