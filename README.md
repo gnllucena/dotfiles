@@ -36,7 +36,7 @@ darwin-rebuild switch --flake ~/Developer/dotfiles#monstro
 ---------
 
 nix flake update
-darwin-rebuild switch --flake ~/Developer/dotfiles#monstro
+darwin-rebuild switch --flake ./#monstro
 
 
 -----

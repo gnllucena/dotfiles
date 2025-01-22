@@ -94,7 +94,7 @@
             "/Applications/Microsoft Edge.app"
           ];
           dock.persistent-others = [
-            "/Users/gabriel/Developer"
+            "/Users/gabriel/git"
           ];
           finder.NewWindowTarget = "Home";
           finder.AppleShowAllExtensions = true;
