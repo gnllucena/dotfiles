@@ -1,3 +1,40 @@
+<!-- 
+Window Management
+Action	            Windows/Linux	macOS
+New window	        Ctrl+Shift+N	Cmd+N
+Close window	    Alt+F4	        Cmd+Shift+W
+Close all windows	-	            Cmd+Shift+Option+W
+Toggle fullscreen	Ctrl+Enter	    Cmd+Enter or Cmd+Ctrl+F
+Quit application	Ctrl+Shift+Q	Cmd+Q
+
+Tab Management
+Action	            Windows/Linux	                                macOS
+New tab	            Ctrl+Shift+T	                                Cmd+T
+Close tab/surface	Ctrl+Shift+W	                                Cmd+W
+Previous tab	    Ctrl+Shift+Tab, Ctrl+Shift+Left, Ctrl+Page Up	Cmd+Shift+[
+Next tab	        Ctrl+Tab, Ctrl+Shift+Right, Ctrl+Page Down	    Cmd+Shift+]
+Go to tab 1-8	    Alt+[1-8]	                                    Cmd+[1-8]
+Go to last tab	    Alt+9	                                        Cmd+9
+Move tab	-	-
+
+Split Management
+Action	                Windows/Linux           macOS
+New split (right)	    Ctrl+Shift+O	        Cmd+D
+New split (down)	    Ctrl+Shift+E	        Cmd+Shift+D
+Focus previous split	Ctrl+Super+[	        Cmd+[
+Focus next split	    Ctrl+Super+]	        Cmd+]
+Focus split up	        Ctrl+Alt+Up	            Cmd+Option+Up
+Focus split down	    Ctrl+Alt+Down	        Cmd+Option+Down
+Focus split left	    Ctrl+Alt+Left	        Cmd+Option+Left
+Focus split right	    Ctrl+Alt+Right	        Cmd+Option+Right
+Toggle split zoom	    Ctrl+Shift+Enter	    Cmd+Shift+Enter
+Resize split up	        Ctrl+Super+Shift+Up	    Cmd+Ctrl+Up
+Resize split down	    Ctrl+Super+Shift+Down	Cmd+Ctrl+Down
+Resize split left	    Ctrl+Super+Shift+Left	Cmd+Ctrl+Left
+Resize split right	    Ctrl+Super+Shift+Right	Cmd+Ctrl+Right
+Equalize splits	        Ctrl+Super+Shift+=	    Cmd+Ctrl+= 
+-->
+
 working-directory = "/Users/gabriel/git"
 font-size = 26
 font-thicken = true
