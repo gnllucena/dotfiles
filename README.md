@@ -4,8 +4,6 @@ sudo scutil --set ComputerName "mypc"
 sudo scutil --set HostName "mypc"
 sudo scutil --set LocalHostName "mypc"
 
-
-
 mkdir ~/Developer
 
 xcode-select --install
@@ -32,24 +30,22 @@ https://mynixos.com/nix-darwin/options
 
 darwin-rebuild switch --flake ~/Developer/dotfiles#monstro
 
+---
 
----------
-
+nix-channel --update
 nix flake update
 darwin-rebuild switch --flake ./#monstro
 
-
------
-
+---
 
 mkdir ~/.ssh
 ssh-keygen -t rsa -C "primary-email@example.com" -f ~/.ssh/id_rsa_primary
 ssh-keygen -t rsa -C "secondary-email@example.com" -f ~/.ssh/id_rsa_secondary
 
--------
-
+---
 
 # necessary for raycast, should be done on home-manager
+
           # # Disable Command + Space for Spotlight
           # "com.apple.symbolichotkeys" = {
           #   AppleSymbolicHotKeys = {
@@ -64,13 +60,10 @@ ssh-keygen -t rsa -C "secondary-email@example.com" -f ~/.ssh/id_rsa_secondary
 
           --------
 
-
 git clone git@github.primary:semnome027/app.git
-
-
 
 darwin-rebuild switch --flake ~/Developer/gnllucena/dotfiles#monstro
 
+---
 
---------------------------------------------------------------
 stow --adopt . #overrides exisitn files

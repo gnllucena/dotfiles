@@ -10,9 +10,8 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
   let 
+    # https://mynixos.com/nix-darwin/options
     configuration = { pkgs, config, ... }: {
-      # https://mynixos.com/nix-darwin/options
-
       nix.settings.experimental-features = "nix-command flakes";
 
       nixpkgs = {
@@ -36,26 +35,33 @@
           pkgs.lazygit
           pkgs.awscli2
           pkgs.neovim
+          pkgs.granted
         ];
 
+      # https://formulae.brew.sh/
       homebrew = {
         enable = true;
         brews = [
           "nvm"
           "starship"
+          "fastfetch"
         ];
         casks = [
+          "nordvpn"
+          "discord"
           "alt-tab"
           "ghostty"
           "docker"
           "chatgpt"
           "postman"
+          "google-chrome"
           "microsoft-edge"
           "visual-studio-code"
           "the-unarchiver"
           "notion-calendar"
           "raycast"
           "spotify"
+          "obs"
         ];
         masApps = {
           "Signal Shifter" = 6446061552;
@@ -73,11 +79,11 @@
         tmux.enable = true;
       };
 
+      # https://mynixos.com/nix-darwin/options/system.defaults
       system = {
         stateVersion = 5;
         configurationRevision = self.rev or self.dirtyRev or null;
         defaults = {
-          # https://mynixos.com/nix-darwin/options/system.defaults
           dock.autohide = true;
           dock.show-recents = false;
           dock.minimize-to-application = true;

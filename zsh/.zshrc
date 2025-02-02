@@ -13,10 +13,16 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/zinit.git"
 
+# Zinit
 if [[ ! -d $ZINIT_HOME ]]; then
   mkdir -p "$(dirname $ZINIT_HOME)"
   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
 
 source "${ZINIT_HOME}/zinit.zsh"
 
@@ -68,9 +74,15 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
+alias assume=". assume"
 alias ll='ls -la --color'
 alias ls='ls --color'
 alias ..='cd ..'
 
 # Shell integrations
 eval "$(fzf --zsh)"
+
+# # Start tmux automatically if not already inside a tmux session
+# if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#   tmux attach-session -t default || tmux new-session -s default
+# fi
