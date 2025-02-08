@@ -23,7 +23,6 @@
       environment.systemPackages =
         [
           pkgs.zsh
-          pkgs.tmux
           pkgs.stow
           pkgs.fzf
           pkgs.bat
