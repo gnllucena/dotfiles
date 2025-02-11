@@ -46,6 +46,7 @@
           "fastfetch"
         ];
         casks = [
+          "steam"
           "nordvpn"
           "discord"
           "alt-tab"
