@@ -181,6 +181,8 @@ services:
   gluetun:
     image: qmcgaw/gluetun
     container_name: gluetun
+    networks:
+      - lab
     ports:
       - 6767:6767 #bazarr
       - 8686:8686 #lidarr
@@ -201,3 +203,7 @@ services:
       - WIREGUARD_PRIVATE_KEY=${WIREGUARD_PRIVATE_KEY}
       - SERVER_COUNTRIES=Brazil
     restart: unless-stopped
+
+networks:
+  lab:
+    name: lab
