@@ -47,15 +47,15 @@ services:
       - ./media:/media
       - ./custom-templates:/templates
     ports:
-      - "${COMPOSE_PORT_HTTP:-9000}:9000"
-      - "${COMPOSE_PORT_HTTPS:-9443}:9443"
+      - 9000:9000
+      - 9444:9443
     depends_on:
       postgresql:
         condition: service_healthy
       redis:
         condition: service_healthy
     networks:
-      - lab
+      - servarr
 
   worker:
     image: ghcr.io/goauthentik/server:2025.2.3
@@ -82,7 +82,7 @@ services:
       redis:
         condition: service_healthy
     networks:
-      - lab
+      - servarr
 
 volumes:
   database:
@@ -91,5 +91,5 @@ volumes:
     driver: local
 
 networks:
-  lab:
+  servarr:
     external: true

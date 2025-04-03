@@ -182,7 +182,7 @@ services:
     image: qmcgaw/gluetun
     container_name: gluetun
     networks:
-      - lab
+      - servarr
     ports:
       - 6767:6767 #bazarr
       - 8686:8686 #lidarr
@@ -205,5 +205,5 @@ services:
     restart: unless-stopped
 
 networks:
-  lab:
-    name: lab
+  servarr:
+    name: servarr
